@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Codelular</title>
+        <link rel="stylesheet" href="assets/style.css">
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+        <style>
+            .toptabbar a {
+                color: white;
+                text-decoration: none;
+                padding: 10px;
+                font-size: 1.2em;
+                background-color: #272727;
+                border-radius: 6px;
+                margin: 0px 10px;
+            }
+            .toptabbar a.active {
+                background-color: #878686;
+                color: black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="topnav">
+            <a href="#"><img src="assets/logo.png" style="height:2em;"></a>
+        </div>
+
+        <div class="leftcolumn container">
+
+            <div class="toptabbar">
+                <a href="javascript:switchToHTML()" class="active" id="htmltab">HTML</a>
+                <a href="javascript:switchToCSS()" class="inactive" id="csstab">CSS</a>
+                <a href="javascript:switchToJS()" class="inactive" id="jstab">JavaScript</a>
+            </div>
+
+            <textarea class="code-input showed" id="html" placeholder="HTML" spellcheck="false" onkeyup="update()"></textarea>
+
+            <textarea class="code-input hidden" id="css" placeholder="CSS" spellcheck="false" onkeyup="update()"></textarea>
+
+            <textarea class="code-input hidden" id="js" placeholder="JavaScript" spellcheck="false" onkeyup="update()"></textarea>
+
+        </div>
+        <div class="rightcolumn container">
+            <iframe id="iframe-viewer"></iframe>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
